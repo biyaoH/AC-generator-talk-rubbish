@@ -16,7 +16,7 @@
               src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
               alt="engineer">
             <div id="profession-choice">
-              <input id="engineer-radio" type="radio" name="profession" class="form-control" checked>
+              <input id="engineer-radio" type="radio" name="profession" class="form-control" value="engineer" checked />
               <label for="profession">工程師</label>
             </div>
           </div>
@@ -27,7 +27,7 @@
               src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
               alt="designer">
             <div id="profession-choice">
-              <input id="designer-radio" type="radio" name="profession" class="form-control">
+              <input id="designer-radio" type="radio" name="profession" class="form-control" value="designer">
               <label for="designer-radio">設計師</label>
             </div>
           </div>
@@ -38,7 +38,7 @@
               src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
               alt="entrepreneur">
             <div id="profession-choice">
-              <input id="entrepreneur-radio" type="radio" name="profession" class="form-control">
+              <input id="entrepreneur-radio" type="radio" name="profession" class="form-control" value="entrepreneur">
               <label for="entrepreneur-radio">創業家</label>
             </div>
           </div>
@@ -49,7 +49,7 @@
 
       <div id="bottom">
         <button type="submit" class="btn btn-warning">產生幹話</button>
-        <input type="text" name="createTalkRubbish" class="form-control" id="create-talk-rubbish">
+        <input type="text" name="createTalkRubbish" class="form-control" id="create-talk-rubbish" value={{talkRubbish}}>
       </div>
     </form>
   </div>
