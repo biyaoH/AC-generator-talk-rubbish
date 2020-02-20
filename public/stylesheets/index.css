@@ -1,6 +1,7 @@
-/* body h1 h2{
+/* 不知道為什麼字型無法載入 */
+body h1 h2 p{
   font-family: 'Noto Sans TC', sans-serif;
-} */
+}
 
 .container {
   width: 900px;

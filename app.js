@@ -6,8 +6,9 @@ const app = express()
 
 const port = 3000
 
-app.engine('handlebars', exphbs({ degaultLayout: 'main' }))
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
@@ -18,10 +19,15 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  // console.log('req.body', req.body)
-  console.log(generateTalkRubbish(req.body.profession))
-  const talkRubbish = generateTalkRubbish(req.body.profession)
-  res.render('index', { talkRubbish: talkRubbish })
+  // console.log(generateTalkRubbish(req.body.profession))
+  const choiceRadio = req.body.profession
+  const talkRubbish = generateTalkRubbish(choiceRadio)
+
+  // 看了很多同學的作業，這個感覺很簡潔，但其實沒有很明白箇中道理
+  const { profession } = req.body
+  console.log({ profession })
+
+  res.render('index', { talkRubbish, [profession]: true })
 })
 
 app.listen(port, () => {
