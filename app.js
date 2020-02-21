@@ -25,7 +25,7 @@ app.post('/', (req, res) => {
 
   // 看了很多同學的作業，這個感覺很簡潔，但其實沒有很明白箇中道理
   const { profession } = req.body
-  console.log({ profession })
+  // console.log({ profession })
 
   res.render('index', { talkRubbish, [profession]: true })
 })
